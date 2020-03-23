@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorTrackView">
+        <attr name="changeColor" format="color" />
+        <attr name="progress" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ColorTrackTabLayout">
+        <attr name="tabTextColor" format="color" />
+        <attr name="tabSelectTextColor" format="color" />
+        <attr name="tabTextSize" format="dimension" />
+        <attr name="tabSelectScale" format="float" />
+        <attr name="tabPadding" format="dimension" />
+        <attr name="startScrollX" format="dimension" />
+        <attr name="tabForeground" format="reference"/>
+        <attr name="tabMode">
+            <enum name="scroll" value="0" />
+            <enum name="fill" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>
