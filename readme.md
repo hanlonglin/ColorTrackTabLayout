@@ -4,6 +4,8 @@
 
 ## 演示：
 
+效果图看不清可以去 [简书地址](https://www.jianshu.com/p/26e4c433c8bd)
+
 #### 1. 渐变文字（<kbd>ColorTrackView</kbd>）
 
 ![渐变文字](/gif/colorTrackView1.gif)
