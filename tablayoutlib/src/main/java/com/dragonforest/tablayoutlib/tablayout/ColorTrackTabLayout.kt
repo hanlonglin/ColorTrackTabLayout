@@ -41,25 +41,25 @@ class ColorTrackTabLayout : LinearLayout {
         val obtainStyledAttributes =
             context.obtainStyledAttributes(attr, R.styleable.ColorTrackTabLayout)
         tabSelectTextColor = obtainStyledAttributes.getColor(
-            R.styleable.ColorTrackTabLayout_tabSelectTextColor,
+            R.styleable.ColorTrackTabLayout_ct_tabSelectTextColor,
             Color.RED
         )
         tabTextColor = obtainStyledAttributes.getColor(
-            R.styleable.ColorTrackTabLayout_tabTextColor,
+            R.styleable.ColorTrackTabLayout_ct_tabTextColor,
             Color.GRAY
         )
         tabTextSize =
-            obtainStyledAttributes.getDimension(R.styleable.ColorTrackTabLayout_tabTextSize, 18f)
+            obtainStyledAttributes.getDimension(R.styleable.ColorTrackTabLayout_ct_tabTextSize, 18f)
         tabSelectScale =
-            obtainStyledAttributes.getFloat(R.styleable.ColorTrackTabLayout_tabSelectScale, 1.1f)
+            obtainStyledAttributes.getFloat(R.styleable.ColorTrackTabLayout_ct_tabSelectScale, 1.1f)
         startScrollX =
-            obtainStyledAttributes.getDimension(R.styleable.ColorTrackTabLayout_startScrollX, 200f)
+            obtainStyledAttributes.getDimension(R.styleable.ColorTrackTabLayout_ct_startScrollX, 200f)
         tabMode =
-            obtainStyledAttributes.getInt(R.styleable.ColorTrackTabLayout_tabMode, 0)
+            obtainStyledAttributes.getInt(R.styleable.ColorTrackTabLayout_ct_tabMode, 0)
         tabPadding =
-            obtainStyledAttributes.getDimension(R.styleable.ColorTrackTabLayout_tabPadding, 30f)
+            obtainStyledAttributes.getDimension(R.styleable.ColorTrackTabLayout_ct_tabPadding, 30f)
         tabForeground = obtainStyledAttributes.getResourceId(
-            R.styleable.ColorTrackTabLayout_tabForeground,
+            R.styleable.ColorTrackTabLayout_ct_tabForeground,
             R.drawable.ripper_colortrackitem
         )
         obtainStyledAttributes.recycle()

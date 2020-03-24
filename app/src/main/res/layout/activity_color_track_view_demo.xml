@@ -15,8 +15,8 @@
         android:textStyle="bold"
         android:textColor="@android:color/darker_gray"
         android:layout_marginTop="200dp"
-        app:changeColor="#ff0000"
-        app:progress="0.5"
+        app:ct_changeColor="#ff0000"
+        app:ct_progress="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

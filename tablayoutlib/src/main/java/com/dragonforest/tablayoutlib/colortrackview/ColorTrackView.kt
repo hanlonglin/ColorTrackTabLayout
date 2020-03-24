@@ -38,8 +38,8 @@ class ColorTrackView : AppCompatTextView {
         val obtainStyledAttributes =
             context.obtainStyledAttributes(attr, R.styleable.ColorTrackView)
         changeColor =
-            obtainStyledAttributes.getColor(R.styleable.ColorTrackView_changeColor, Color.RED)
-        progress = obtainStyledAttributes.getFloat(R.styleable.ColorTrackView_progress, 0f)
+            obtainStyledAttributes.getColor(R.styleable.ColorTrackView_ct_changeColor, Color.RED)
+        progress = obtainStyledAttributes.getFloat(R.styleable.ColorTrackView_ct_progress, 0f)
         obtainStyledAttributes.recycle()
     }
 

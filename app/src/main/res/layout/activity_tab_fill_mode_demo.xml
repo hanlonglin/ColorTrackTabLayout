@@ -13,13 +13,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startScrollX="100dp"
-        app:tabMode="fill"
-        app:tabPadding="10dp"
-        app:tabSelectScale="1.1"
-        app:tabSelectTextColor="#8A2BE2"
-        app:tabTextColor="@android:color/darker_gray"
-        app:tabTextSize="18sp" />
+        app:ct_startScrollX="100dp"
+        app:ct_tabMode="fill"
+        app:ct_tabPadding="10dp"
+        app:ct_tabSelectScale="1.1"
+        app:ct_tabSelectTextColor="#8A2BE2"
+        app:ct_tabTextColor="@android:color/darker_gray"
+        app:ct_tabTextSize="18sp" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
