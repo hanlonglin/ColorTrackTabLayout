@@ -39,7 +39,7 @@ allprojects {
 
 ```groovy
 dependencies {
-	        implementation 'com.github.hanlonglin:ColorTrackTabLayout:1.0.0'
+	        implementation 'com.github.hanlonglin:ColorTrackTabLayout:${releaseVersion}'
 }
 ```
 
