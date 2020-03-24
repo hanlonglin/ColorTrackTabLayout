@@ -6,15 +6,15 @@
 
 #### 1. 渐变文字（<kbd>ColorTrackView</kbd>）
 
-![渐变文字](gif\colorTrackView1.gif)
+![渐变文字](/gif/colorTrackView1.gif)
 
 #### 2. 仿今日头条(滑动模式)(<kbd>ColorTrackTabLayout</kbd>)
 
-![滑动模式](gif\colorTrackTablayout1.gif)
+![滑动模式](/gif/colorTrackTablayout1.gif)
 
 #### 3. 仿今日头条（填充模式）(<kbd>ColorTrackTabLayout</kbd>)
 
-![填充模式](gif\colorTrackTabLayout2.gif)
+![填充模式](/gif/colorTrackTabLayout2.gif)
 
 ## 使用
 
