@@ -1,26 +1,54 @@
-## 仿今日头条渐变文字指示器
+# 仿今日头条渐变文字指示器
 
 
 
-#### 演示：
+## 演示：
 
-##### 1. 渐变文字
+#### 1. 渐变文字（<kbd>ColorTrackView</kbd>）
 
 ![渐变文字](gif\colorTrackView1.gif)
 
+#### 2. 仿今日头条(滑动模式)(<kbd>ColorTrackTabLayout</kbd>)
+
+![滑动模式](gif\colorTrackTablayout1.gif)
+
+#### 3. 仿今日头条（填充模式）(<kbd>ColorTrackTabLayout</kbd>)
+
+![填充模式](gif\colorTrackTabLayout2.gif)
+
+## 使用
+
+### Dependencies:
+
+####  **Step 1.** Add the JitPack repository to your build file 
+
+```groovy
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+```css
+	}
+```
+
+#### **Step 2.** Add the dependency
+
+```groovy
+dependencies {
+	        implementation 'com.github.hanlonglin:ColorTrackTabLayout:1.0.0'
+}
+```
 
 
-##### 2. 仿今日头条tabLayout(滑动模式)
 
-![](gif\colorTrackTablayout1.gif)
+### Code:
 
-##### 3. 仿今日头条（填充模式）
 
-![](gif\colorTrackTabLayout2.gif)
-
-#### 使用
-
-##### 1. write the ColorTrackLayout in xml
+####  **Step 1.**  write the ColorTrackLayout in xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -61,7 +89,7 @@
 
 
 
-##### 2. build  your own PageAdapter, here is mine:
+#### **Step 2**. build  your own PageAdapter, here is mine:
 
 ```kotlin
 class TabPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
@@ -82,9 +110,8 @@ class TabPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(f
 }
 ```
 
-##### 
 
-##### 3. put data to your pageAdapter,and set the adapter to ViewPager
+#### **Step 3**. put data to your pageAdapter,and set the adapter to ViewPager
 
 ```kotlin
 var pagerAdapter =
@@ -96,45 +123,49 @@ viewpager.adapter = pagerAdapter
 
 
 
-##### 4. set viewPager to the ColorTrackTabLayout
+#### **Step 4**. set viewPager to the ColorTrackTabLayout
 
 ```kotlin
 ct_tablayout.setUpWithViewPager(viewpager)
 ```
 
-ok, down
+ok, done
 
 
 
-#### 属性说明
+## 属性说明
 
-- ColorTrackView
+### ColorTrackView
 
-  | 属性                      | 说明                                                         |
-  | ------------------------- | ------------------------------------------------------------ |
-  | app:changeColor="#ff0000" | 滑动时渐变的颜色，默认为红色                                 |
-  | app:progress="0.5"        | 滑动进度，0~1向右滑动 0~-1向左滑动。0为初始状态，1为向右最终状态，-1为向左最终状态 |
+- 颜色渐变的TextView
 
-  
-
-- ColorTrackTabLayout
-
-  | 属性                                                | 说明                                                         |
-  | --------------------------------------------------- | ------------------------------------------------------------ |
-  | app:tabTextColor="@android:color/darker_gray"       | tab未选中文字颜色                                            |
-  | app:tabSelectTextColor="#8A2BE2"                    | tab选中文字的颜色                                            |
-  | app:tabTextSize="18sp"                              | tab文字大小                                                  |
-  | app:tabSelectScale="1.1"                            | tab选中文字缩放值，默认为1（即不缩放）                       |
-  | app:tabPadding="10dp"                               | tab文字的左右内间距                                          |
-  | app:tabMode="fill"                                  | tab排列模式。fill模式：所有tab铺满整个屏幕，平均占据；scroll模式：所有tab大小由自身决定，从左向右可滑动 |
-  | app:startScrollX="100dp"                            | tab开始滑动的距离。当viewPager滑动超过此值时，整个tabLayout开始自动滑动 |
-  | app:tabForeground="@drawable/ripper_colortrackitem" | tab的前景图，可设置点击的前景。比如水波纹（当然，这需要api>23） |
+| 属性                      | 说明                                                         |
+| ------------------------- | ------------------------------------------------------------ |
+| app:changeColor="#ff0000" | 滑动时渐变的颜色，默认为红色                                 |
+| app:progress="0.5"        | 滑动进度，0~1向右滑动 0~-1向左滑动。0为初始状态，1为向右最终状态，-1为向左最终状态 |
 
 
 
-#### 结尾
+### ColorTrackTabLayout
 
-- 处于好奇于是做了这个tabLayout,其实蛮简单的，可能对于初学者不熟悉自定义view的人来说有写难度，所以开放出来，供大家学习交流。如果有问题，我会慢慢跟进，也欢迎大家提出宝贵意见。
+- 仿今日头条文字颜色渐变的TabLayout
+
+| 属性                                                | 说明                                                         |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| app:tabTextColor="@android:color/darker_gray"       | tab未选中文字颜色                                            |
+| app:tabSelectTextColor="#8A2BE2"                    | tab选中文字的颜色                                            |
+| app:tabTextSize="18sp"                              | tab文字大小                                                  |
+| app:tabSelectScale="1.1"                            | tab选中文字缩放值，默认为1（即不缩放）                       |
+| app:tabPadding="10dp"                               | tab文字的左右内间距                                          |
+| app:tabMode="fill"                                  | tab排列模式。fill模式：所有tab铺满整个屏幕，平均占据；scroll模式：所有tab大小由自身决定，从左向右可滑动 |
+| app:startScrollX="100dp"                            | tab开始滑动的距离。当viewPager滑动超过此值时，整个tabLayout开始自动滑动 |
+| app:tabForeground="@drawable/ripper_colortrackitem" | tab的前景图，可设置点击的前景。比如水波纹（当然，这需要api>=23） |
+
+
+
+## 结尾
+
+- 起初看到这个效果觉得不错，出于好奇于是自己撸了。用在项目中也是不错的。也希望各路英豪提出宝贵意见。
 
 
 
