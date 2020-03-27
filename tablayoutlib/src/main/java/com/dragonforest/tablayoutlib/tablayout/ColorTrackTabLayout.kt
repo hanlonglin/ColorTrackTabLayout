@@ -53,7 +53,10 @@ class ColorTrackTabLayout : LinearLayout {
         tabSelectScale =
             obtainStyledAttributes.getFloat(R.styleable.ColorTrackTabLayout_ct_tabSelectScale, 1.1f)
         startScrollX =
-            obtainStyledAttributes.getDimension(R.styleable.ColorTrackTabLayout_ct_startScrollX, 200f)
+            obtainStyledAttributes.getDimension(
+                R.styleable.ColorTrackTabLayout_ct_startScrollX,
+                200f
+            )
         tabMode =
             obtainStyledAttributes.getInt(R.styleable.ColorTrackTabLayout_ct_tabMode, 0)
         tabPadding =
@@ -82,13 +85,19 @@ class ColorTrackTabLayout : LinearLayout {
         for (pos in 0 until itemViews.size) {
             var itemView = itemViews.get(pos)
             itemView.setOnClickListener {
-                vp.setCurrentItem(pos)
+                vp.setCurrentItem(pos,true)
             }
         }
 
         vp.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
-
+                if (state == ViewPager.SCROLL_STATE_IDLE) {
+                    // 重置状态（除去当前显示的页）
+                    for (index in 0 until itemViews.size) {
+                        if (index == vp.currentItem) continue
+                        itemViews[index].progress = 0f
+                    }
+                }
             }
 
             override fun onPageScrolled(
@@ -119,10 +128,7 @@ class ColorTrackTabLayout : LinearLayout {
             }
 
             override fun onPageSelected(position: Int) {
-                for (index in 0 until itemViews.size) {
-                    if (index == position) continue
-                    itemViews[index].progress = 0f
-                }
+
             }
 
         })
